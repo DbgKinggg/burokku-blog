@@ -34,8 +34,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </div>
                 <nav className="ml-auto text-sm font-medium space-x-6">
                   <Link href="/">Blog</Link>
-                  <Link href="/">Home</Link>
-                  <Link href="/">App</Link>
+                  <Link href="https://burokku.one/">Home</Link>
+                  <Link href="https://app.burokku.one/">App</Link>
                 </nav>
               </div>
             </header>
