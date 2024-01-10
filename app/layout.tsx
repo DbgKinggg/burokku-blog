@@ -5,10 +5,12 @@ import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 import { GeistSans } from 'geist/font/sans';
 import Image from "next/image"
+import Logo from "@/components/logo"
+import ClientOnly from "@/components/client-only"
 
 export const metadata = {
-  title: "Kazu Blog",
-  description: "Kazu Blog - All things Kazu",
+  title: "Burokku Blog",
+  description: "All things Burokku",
 }
 
 interface RootLayoutProps {
@@ -26,11 +28,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header>
               <div className="flex items-center justify-between">
                 <div className="flex gap-x-3">
-                  <Link className="font-bold text-xl z-50"
-                    href="/"
-                  >
-                    Kazu
-                  </Link>
+                  <ClientOnly>
+                    <Logo />
+                  </ClientOnly>
                   <ModeToggle />
                 </div>
                 <nav className="flex ml-auto text-sm font-medium space-x-6">
