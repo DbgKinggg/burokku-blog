@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 import { GeistSans } from 'geist/font/sans';
+import Image from "next/image"
 
 export const metadata = {
   title: "Kazu Blog",
@@ -32,10 +33,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   </Link>
                   <ModeToggle />
                 </div>
-                <nav className="ml-auto text-sm font-medium space-x-6">
+                <nav className="flex ml-auto text-sm font-medium space-x-6">
                   <Link href="/">Blog</Link>
                   <Link href="https://burokku.one/">Home</Link>
                   <Link href="https://app.burokku.one/">App</Link>
+                  <Link
+                    href={`https://twitter.com/burokku_one`}
+                    target="_blank"
+                    aria-label={`X formerly known as Twitter`}
+                    className="inline-block my-auto"
+                  >
+                    <Image
+                      src={`/twitter-x.svg`}
+                      alt={`X formerly known as Twitter`}
+                      width={12}
+                      height={12}
+                    />
+                  </Link>
                 </nav>
               </div>
             </header>
