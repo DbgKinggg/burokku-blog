@@ -8,9 +8,33 @@ import Image from "next/image"
 import Logo from "@/components/logo"
 import ClientOnly from "@/components/client-only"
 
+const APP_NAME = "Burokku Blog"
+const APP_DESCRIPTION = "All things Burokku"
 export const metadata = {
-  title: "Burokku Blog",
-  description: "All things Burokku",
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+  openGraph: {
+    title: APP_NAME,
+    description: APP_DESCRIPTION,
+    images: [
+      {
+        url: 'https://burokku.one/images/open-graph.png',
+        width: 2400,
+        height: 1260,
+      }
+    ]
+  },
+  twitter: {
+    title: APP_NAME,
+    description: APP_DESCRIPTION,
+    images: [
+      {
+        url: 'https://burokku.one/images/open-graph.png',
+        width: 2400,
+        height: 1260,
+      }
+    ]
+  }
 }
 
 interface RootLayoutProps {
