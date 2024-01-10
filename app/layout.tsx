@@ -34,9 +34,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <ModeToggle />
                 </div>
                 <nav className="flex ml-auto text-sm font-medium space-x-6">
-                  <Link href="/">Blog</Link>
                   <Link href="https://burokku.one/">Home</Link>
                   <Link href="https://app.burokku.one/">App</Link>
+                  <Link href="https://docs.burokku.one/">Docs</Link>
                   <Link
                     href={`https://twitter.com/burokku_one`}
                     target="_blank"
